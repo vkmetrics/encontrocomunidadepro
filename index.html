@@ -58,6 +58,12 @@ h2{font-size:clamp(30px,4.4vw,44px);line-height:1.1;font-weight:800;margin:0 0 1
 .card p+p{margin-top:2px}
 .btn{align-self:flex-start;margin-top:8px;display:inline-block;padding:13px 24px;border-radius:99px;background:linear-gradient(90deg,#7636EB,#A855F7);color:#fff;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
 .btn:hover{filter:brightness(1.12)}
+.lunch{list-style:none;margin:8px 0 6px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.lunch li{background:rgba(124,58,237,.08);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:4px;align-content:start}
+.lunch li>a{color:var(--lav);font-weight:700;text-decoration:underline;text-decoration-color:rgba(201,166,255,.4);text-underline-offset:3px}
+.lunch li span{color:var(--mut);font-size:14px;line-height:1.5}
+.lunch li span a{color:var(--lav);text-decoration:none}
+.card .note{color:var(--mut);font-size:14px}
 .todo{color:var(--red);font-weight:700}
 .hotels{list-style:none;margin:6px 0 0;padding:0 0 14px;display:grid;gap:6px;border-bottom:1px dashed var(--line)}
 .hotels:last-of-type{border-bottom:0;padding-bottom:0}
@@ -176,10 +182,12 @@ footer img{height:24px;display:block}
 <p>Depois dele, retire o seu crachá oficial de acesso no 17º andar, logo ao lado da plenária.</p>
 </div>
 
-<div class="card">
+<div class="card wide" id="alimentacao">
 <h3>🍽️ Alimentação</h3>
 <p>O coffee da manhã está incluso.</p>
-<p>O almoço acontece no <span class="todo">[DEFINIR LOCAL DO ALMOÇO]</span>, a poucos minutos a pé. O almoço não está incluso.</p>
+<p><b>O almoço não está incluso.</b> Cada participante escolhe onde almoçar. Veja algumas indicações perto do evento:</p>
+<ul class="lunch"><li><a href="https://maps.google.com/?q=ICI+Brasserie+JK+Iguatemi" target="_blank" rel="noopener">ICI Brasserie (JK Iguatemi)</a><span>Brasserie francesa · R$ 100 a R$ 145 por pessoa<br>Reserva pelo canal de eventos no site da casa</span></li><li><a href="https://maps.google.com/?q=Jamie+Oliver+Kitchen+Hor%C3%A1cio+Lafer+S%C3%A3o+Paulo" target="_blank" rel="noopener">Jamie Oliver Kitchen (ex-Jamie's Italian)</a><span>Italiana · R$ 110 a R$ 160 por pessoa<br>Reserva: <a href="tel:+551123651309">(11) 2365-1309</a></span></li><li><a href="https://maps.google.com/?q=R%C3%A1scal+Itaim+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ráscal Itaim</a><span>Mediterrânea, buffet de saladas e massas na hora · R$ 130 a R$ 180 por pessoa<br>Reserva: <a href="tel:+551130783351">(11) 3078-3351</a></span></li><li><a href="https://maps.google.com/?q=Gero+Panini+Itaim+S%C3%A3o+Paulo" target="_blank" rel="noopener">Gero Panini Itaim</a><span>Italiana, do Grupo Fasano · R$ 140 a R$ 220 por pessoa<br>Reserva: <a href="https://wa.me/5511966322088" target="_blank" rel="noopener">WhatsApp (11) 96632-2088</a></span></li><li><a href="https://maps.google.com/?q=D%27Brescia+Churrascaria+Faria+Lima+S%C3%A3o+Paulo" target="_blank" rel="noopener">D'Brescia Churrascaria (Faria Lima)</a><span>Churrascaria, rodízio · R$ 200 a R$ 260 por pessoa<br>Reserva: <a href="tel:+551130793250">(11) 3079-3250</a></span></li></ul>
+<p class="note">Valores médios por pessoa, com bebida e serviço.</p>
 <p>Ao final do evento acontece o tradicional Happy Hour!</p>
 </div>
 
@@ -210,10 +218,9 @@ footer img{height:24px;display:block}
 <h2>Programação completa do dia.</h2>
 <p class="sub">Terça-feira, 01 de dezembro de 2026.</p>
 <div class="tl">
-<div class="row"><time>A partir das 08h30</time><div><h3>Credenciamento</h3><p>No térreo do prédio. Os crachás oficiais de acesso são entregues no 17º andar, próximo à plenária.</p></div></div>
-<div class="row"><time>08h30 às 09h30</time><div><h3>Coffee e networking</h3></div></div>
+<div class="row"><time>A partir das 8h30</time><div><h3>Credenciamento e coffee da manhã</h3><p>No térreo do prédio. Os crachás oficiais de acesso são entregues no 17º andar, próximo à plenária.</p><p>O coffee ficará disponível por 2h.</p></div></div>
 <div class="row hl"><time>09h45 às 12h45</time><div><h3>Palestras</h3></div></div>
-<div class="row"><time>12h45 às 14h30</time><div><h3>Almoço</h3><p>Não incluso.</p></div></div>
+<div class="row"><time>12h45 às 14h30</time><div><h3>Almoço</h3><p>Não incluso. Veja as <a href="#alimentacao">indicações de restaurantes</a> acima.</p></div></div>
 <div class="row hl"><time>14h30 às 17h</time><div><h3>Palestras e encerramento</h3></div></div>
 <div class="row"><time>17h30 às 22h30</time><div><h3>Happy Hour</h3><p>O tradicional Happy Hour, onde as melhores conversas costumam nascer.</p></div></div>
 </div>
